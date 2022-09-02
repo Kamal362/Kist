@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/header') %> 
+</head>
+<body>
+    <!-- <%# include('./partials/nav') %>  -->
+            <!--This code contains the tags for the generated timetable-->
+            <section class="table-container">
+                <div class="table">
+                    <% schedules.forEach( schedule => {  %> 
+                    <div class="table-list">
+                        <div class="table-title"><%= schedule.title %> </div>
+                        <div class="table-set">
+                            <div class="table-day"><%= schedule.day %></div>
+                            <div class="table-time">
+                                <div class="table-time-start"><%= schedule.startTime %></div>
+                                <div class="table-time-end"><%= schedule.endTime %></div> 
+                            </div>
+                        </div> 
+                    </div>
+                    <% }) %>
+                <div class="action">
+                    <button class="download"><a href="<%= file  %> " download>Download</a></button>
+                    <button class="add"><a href="<%= form %> ">Add</a></button>
+                </div>
+            </section>
+        </section> 
+</body>
+</html>

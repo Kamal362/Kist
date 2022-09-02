@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/header') %> 
+</head>
+<body>
+    <%- include('./partials/nav') %> 
+      <!--This code contains the tags for the form that takes all the user input-->
+      <section class="form-container">
+        <form method="POST" action="form">
+            <div class="list">
+                <div class="list-title">Title</div>
+                <input type="text" name="title" placeholder="Eg. Birthday"/>
+            </div>
+            <div class="list">
+                <div class="list-title">Day</div>
+                <div class="days">
+                    <select name="day">
+                        <option value="Monday">   Monday</option>
+                        <option value="Tuesday">  Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="THursday"> hursday</option>
+                        <option value="Friday">   Friday</option>
+                        <option value="Saturday"> Saturday</option>
+                        <option value="Sunday">   Sunday</option>
+                    </select>
+                </div>
+            </div>
+            <div class="list">
+                <div class="duration">
+                    <div>
+                        <div class="list-title">Start time</div>
+                        <input name="start" type="time"/>
+                    </div>
+                    <div>
+                        <div class="list-title">End time</div>
+                        <input name="end" type="time"/>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section> 
+</body>
+</html>

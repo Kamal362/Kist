@@ -1,0 +1,295 @@
+/*Responsive mobile first view*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    background-color: #131111;
+    font-size: 14px;
+}
+
+
+
+/*The nav bar styles*/
+nav{
+    position: absolute;
+    width: 100%;
+    padding: 4px 24px;   
+    background-color: #340F27;
+}
+
+nav a img{
+    width: 60px;
+    height: 60px;
+}
+
+
+
+/*The main container style*/
+.main-container{
+    height: auto;
+}
+
+
+/*The intro page style*/
+.intro-container{
+    /* display: none; */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50%;
+}
+
+.intro img{
+    width: 80%;
+}
+
+.intro .subtitle{
+    color: #ffffff;
+    padding-top: 16px;
+    padding-bottom: 64px;
+}
+
+.intro button{
+    width: 100%;
+    padding: 12px 0px;
+    border-radius: 8px;
+    background-color:#D91570;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.intro button:hover{
+    cursor: pointer;
+    background-color:#8e0f4a;
+    transition: all 1s;
+}
+
+
+
+/*The form modal style*/
+.form-container{
+    /* display: none; */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0px 32px;
+}
+
+.form-container form{
+    width: 100%;
+    background-color:#ffffff10;
+    padding: 16px;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.list{
+    margin-bottom: 16px;
+}
+
+.list-title{
+    margin-bottom: 8px;
+}
+
+.list input{
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.list .days{
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.list select{
+    width: 100%;
+}
+
+.list .duration{
+    display: flex;
+    gap: 8px;
+}
+
+.list .duration div{
+    width: 100%;
+}
+
+.form-container form button{
+    margin-top: 16px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    background-color:#D91570;
+    color: #ffffff;
+}
+
+button a{
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+   
+}
+
+/*The generated table list style*/
+.table-container{
+    /* display: none; */
+    position: relative;
+    z-index: 99;
+    margin-top: 70px;
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.table-container .table{
+    width: 100%;
+    background-color:#ffffff10;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.table-container .table .table-list{
+    background-color:#ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.table-container .table .table-list:last-child{
+    margin-bottom: 0px;
+}
+
+.table-title{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.table-set{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.table-day{
+    font-weight: 700;
+    font-size: 16px;
+    color:#D91570;
+}
+
+.table-set .table-time{
+    display: flex;
+    background-color:#af0f5a15;
+    padding: 8px 12px;
+    border-radius: 32px;
+    gap: 16px;
+}
+
+.action{
+    display: flex;
+    align-items: center;
+    margin: 32px 0px;
+    width: 100%;
+    gap: 16px;
+}
+
+.action .download{
+    padding: 12px;
+    flex-basis: 70%;
+    border-radius: 8px;
+    background-color:#D91570;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.download:hover{
+    cursor: pointer;
+    background-color:#8e0f4a;
+    transition: all 1s;
+}
+
+.action .add{
+    padding: 12px;
+    flex-basis: 30%;
+    border-radius: 8px;
+    background-color:#af0f5a2e;
+    color: #D91570;
+    font-weight: 700;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsive Desktop view*/
+@media only screen and (min-width: 768px){
+
+}
+    
+    
+    
+     
+    
+    
+
+
+
+
+    
+/*Responsive Tablet view*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   
+}
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+
+/*Responsive Mobile Navbar view*/
+@media only screen and (max-width: 768px) {
+    
+}
