@@ -5,6 +5,7 @@ const path = require('path')
 const morgan = require('morgan')
 const bodyparser = require('body-parser')
 const pdf = require('pdf-creator-node')
+const fs  = require('fs')
 const {html, options} = require('./public/index')
 
 
@@ -40,12 +41,18 @@ const createPdf = () => {
    });
 }
 
-// const downloadBtn = document.querySelector("#download")
-// downloadBtn.addEventListener('click', () =>{
-//     createPdf()
-// })
+const deletePdf = () =>{
+    fs.unlink('./docs/output.pdf', (err)=>{
+    if(err) 
+      console.log(err)
+     else 
+      console.log('file deleted sucessfully')
+    }) 
+}
+
 
 app.get('/', (req, res, next) => {
+    deletePdf()
     res.render('home',{ form: 'form', home: '/'})
     next()
 })
