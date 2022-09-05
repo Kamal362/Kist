@@ -4,102 +4,34 @@
     <meta charset="utf-8" />
     <title>Kist</title>
     <style>
-        /*The generated table list style*/
-.table-container{
-    /* display: none; */
-    position: relative;
-    z-index: 99;
-    margin-top: 70px;
-    width: 100%;
-    padding: 0px 16px;
-}
-
-.table-container .table{
-    width: 100%;
-    background-color:#ffffff10;
-    padding: 16px;
-    border-radius: 12px;
-}
-
-.table-container .table .table-list{
-    background-color:#ffffff;
-    padding: 16px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-}
-
-.table-container .table .table-list:last-child{
-    margin-bottom: 0px;
-}
-
-.table-title{
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.table-set{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 16px;
-}
-
-.table-day{
-    font-weight: 700;
-    font-size: 16px;
-    color:#D91570;
-}
-
-.table-set .table-time{
-    display: flex;
-    background-color:#af0f5a15;
-    padding: 8px 12px;
-    border-radius: 32px;
-    gap: 16px;
-}
-
-.action{
-    display: flex;
-    align-items: center;
-    margin: 32px 0px;
-    width: 100%;
-    gap: 16px;
-}
-
+       h1{
+        font-size: 50px; 
+        /* font-weight: 600;  */
+        color: #8e0f4a;
+       } 
+       h2{
+        font-size: 30px
+       }
+       span h2{
+        font-size: 25px; 
+        display: inline; 
+        color: #8e0f4a;
+        margin-left: 10px
+       }
     </style>
   </head>
   <body>
-    <table>
-         <!-- {{#each schedule}}
-            <div class="table-title">{{this.title}}  </div>
-            <div class="table-set">
-                <div class="table-day">{{this.day}} </div>
-                <div class="table-time">
-                    <div class="table-time-start">{{this.startTime}} </div>
-                    <div class="table-time-end">{{this.endTime}} </div> 
-                </div>
-            </div>
-            {{/each}} -->
-        <thead>
-            <tr><h1>{{ this.heading }}</h1></tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Title</td>
-                <td>Day</td>
-                <td>Time Start</td>
-                <td>Time End</td>
-            </tr>
-            {{#each schedule}}
-            <tr>
-                <td>{{this.title}}</td>
-                <td>{{this.day}}</td>
-                <td>{{this.startTime}}</td>
-                <td>{{this.endTime}}</td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table> 
-
+    <hr>
+        {{#each schedule}}
+        <h1>{{this.title}}  </h1>
+        <h2> {{this.day}} </h2>
+        <span>
+           <h2>Start Time: {{this.startTime}}</h2>
+           <h2>End Time: {{this.endTime}}</h2>
+        </span>
+        <hr>
+        <br>
+        
+       {{/each}}
   </body>
 </html>

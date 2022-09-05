@@ -25,7 +25,7 @@ const createPdf = () => {
     var document = {
         html: html,
         data: {
-          details: schedule,
+            schedule: schedule,
         },
         path: "./docs/output.pdf",
         type: "",
@@ -41,8 +41,8 @@ const createPdf = () => {
    });
 }
 
-const deletePdf = () =>{
-    fs.unlink('./docs/output.pdf', (err)=>{
+const deletePdf = async () =>{
+    await fs.unlink('./docs/output.pdf', (err)=>{
     if(err) 
       console.log(err)
      else 
@@ -56,17 +56,21 @@ app.get('/', (req, res, next) => {
     res.render('home',{ form: 'form', home: '/'})
     next()
 })
+
+
 app.get('/detail', (req, res, next) => {
     res.render('display',{ 
         form: 'form',
         home: '/',
         schedules: schedule,
-        file: './docs/output.pdf'
+       // file: './docs/output.pdf'
+        download: 'download'
     })
-    createPdf()
     console.log(schedule)
     next()
 })
+
+
 app.get('/form', (req, res, next) => {
     res.render('form',{ 
         display: 'detail',
@@ -74,6 +78,8 @@ app.get('/form', (req, res, next) => {
     })
     next()
 })
+
+
 app.post('/form', (req, res, next) => {
     schedule.push({
       id:        id,  
@@ -88,11 +94,24 @@ app.post('/form', (req, res, next) => {
 })
 
 
+app.get('/download', (req, res, next)=>{
+    res.render('download', {
+        form: 'form',
+        home: '/',
+        schedules: schedule,
+        download: 'download',
+        file: './docs/output.pdf',
+        status: "click download button to download"
+    })
+    createPdf()
+    //alert("file downloaded ")
+    next()
+})
+
+// our listener
 app.listen(port, err => {
     if(err) console.log(err) 
     console.log(`app listening to port ${port}...`) 
 })
  
-module.exports = {
-    createPdf: createPdf
-}
+

@@ -7,6 +7,7 @@
     <!-- <%# include('./partials/nav') %>  -->
             <!--This code contains the tags for the generated timetable-->
             <section class="table-container">
+               <h3><%= status %> </h3> 
                 <div class="table">
                     <% schedules.forEach( schedule => {  %> 
                     <div class="table-list">
@@ -21,7 +22,7 @@
                     </div>
                     <% }) %>
                 <div class="action">
-                    <button class="download"><a href="<%= download %>">Go download</a></button>
+                    <button class="download"><a href="<%= file  %>" download>Download</a></button>
                     <button class="add"><a href="<%= form %> ">Add</a></button>
                 </div>
             </section>
