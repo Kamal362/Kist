@@ -53,7 +53,8 @@ const deletePdf = async () =>{
 
 
 app.get('/', (req, res, next) => {
-    deletePdf()
+    schedule.length = 0
+    //deletePdf()
     res.render('home',{ form: 'form', home: '/'})
     next()
 })
