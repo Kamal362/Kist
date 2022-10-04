@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <title>Kist</title>
     <style>
-       h1{
+       /* h1{
         font-size: 50px; 
-        /* font-weight: 600;  */
+        /* font-weight: 600;  
         color: #8e0f4a;
        } 
        h2{
@@ -17,12 +17,59 @@
         display: inline; 
         color: #8e0f4a;
         margin-left: 10px
+       } */
+       /*Final generated table style*/
+        .table-container-final{
+           display: block;
+           position: relative;
+           z-index: 99;
+           margin-top: 70px;
+           width: 100%;
+           padding: 0px 16px;
        }
+
+      .table-overflow{
+          overflow-x: auto;
+      }
+      
+      table{
+          width: 100%;
+          border-collapse: collapse;
+          border-spacing: 0;
+      }
+
+      thead{
+          height: 50px;
+          background-color: #340F27;
+          color: #ffffff;
+      }
+
+      table tbody tr{
+          background-color: #ffffff;
+      }
+
+      table tbody tr:nth-of-type(even){
+          background-color: #fff1f8;
+      }
+
+     th{
+         font-size: 25px;
+         font-weight: 500;
+         text-align: left;
+     }
+
+     td{
+         font-size: 20px;
+     }
+
+     table th, td{
+         padding: 20px;
+     }
     </style>
   </head>
   <body>
     <hr>
-        {{#each schedule}}
+        <!-- {{#each schedule}}
         <h1>{{this.title}}  </h1>
         <h2>{{this.day}} </h2>
         <span>
@@ -31,6 +78,31 @@
         </span>
         <hr>
         <br> 
-       {{/each}}
+       {{/each}} -->
+
+       <section class="table-container-final">
+        <div class="table-container-wrap-final">
+            <div class="table-overflow">
+                <table>
+                  <thead>
+                      <th>Day</th>
+                      <th>Task</th>
+                      <th>Start Time</th>
+                      <th>End Time</th>
+                  </thead>
+                  <tbody>
+                    {{#each schedule}}
+                      <tr>
+                          <td class="left-nav">{{this.day}}</td>
+                          <td>{{this.title}}</td>
+                          <td>{{this.startTime}}</td>
+                          <td>{{this.endTime}}</td>
+                      </tr>
+                    {{/each}}
+                  </tbody>
+              </table>
+            </div>
+        </div>
+    </section>
   </body>
 </html>

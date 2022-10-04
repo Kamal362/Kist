@@ -239,9 +239,73 @@ h3{
     margin: 10px auto;
 }
 
+/*Final generated table style*/
+.table-container-final{
+    display: block;
+    position: relative;
+    z-index: 99;
+    margin-top: 70px;
+    width: 100%;
+    padding: 0px 16px;
+}
 
+.table-overflow{
+    overflow-x: auto;
+}
 
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
+thead{
+    height: 50px;
+    background-color: #340F27;
+    color: #ffffff;
+}
+
+table tbody tr{
+    background-color: #ffffff;
+}
+
+table tbody tr:nth-of-type(even){
+    background-color: #fff1f8;
+}
+
+th{
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+}
+
+td{
+    font-size: 14px;
+}
+
+table th, td{
+    padding: 20px;
+}
+
+.action-print{
+    margin: 32px 0px;
+    width: 100%;
+}
+
+.action-print .download{
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    background-color:#D91570;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.download:hover{
+    cursor: pointer;
+    background-color:#8e0f4a;
+    transition: all 1s;
+}
 
 
 
@@ -250,6 +314,73 @@ h3{
 /*Responsive Desktop view*/
 @media only screen and (min-width: 768px){
 
+    /*The intro page style*/
+    .intro-container{
+        width: 20%;
+    }
+
+
+    /*The form modal style*/
+    .form-container{
+        width:  40%;
+    }
+    
+
+    /*The generated table list style*/
+    .table-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .table-container-wrap{
+        width: 40%;
+    }
+
+
+    .table-container-final{
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .table-container-wrap-final{
+        width: 100%;
+    }
+}
+    
+    
+    
+     
+    
+    
+
+
+
+
+    
+/*Responsive Tablet view*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   
+}
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+
+/*Responsive Mobile Navbar view*/
+@media only screen and (max-width: 768px) {
+    
 }
     
     

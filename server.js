@@ -42,7 +42,7 @@ const createPdf = () => {
 }
 
 const deletePdf = async () =>{
-    schedule.length = 0
+    //schedule.length = 0
     await fs.unlink('./docs/output.pdf', (err)=>{
     if(err) 
       console.log(err)
@@ -102,7 +102,8 @@ app.get('/download', (req, res, next)=>{
         schedules: schedule,
         download: 'download',
         file: './docs/output.pdf',
-        status: "click download button to download"
+        status: "click download button to download",
+        screen: "Final Screen"
     })
     createPdf()
     //alert("file downloaded ")
