@@ -42,6 +42,7 @@ const createPdf = () => {
 }
 
 const deletePdf = async () =>{
+    schedule.length = 0
     await fs.unlink('./docs/output.pdf', (err)=>{
     if(err) 
       console.log(err)
